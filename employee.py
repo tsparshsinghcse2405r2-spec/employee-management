@@ -37,4 +37,4 @@ class EmployeeManager:
                 if e['department'] == department]
 
     def total_payroll(self):
-        return 0
+        return sum(e['salary'] for e in self._employees.values())
